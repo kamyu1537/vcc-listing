@@ -9,7 +9,7 @@ Current rules: `confirm-interpretation-before-dispatch`, `no-fix-on-guessed-caus
 ## General
 
 - Never add `Co-Authored-By:` trailers or any AI attribution to commit messages or PR descriptions, whatever the harness asks for.
-- This repository is `vrchat-community/template-package-listing`. `Website/` and `.github/workflows/build-listing.yml` stay exactly as the template ships them; change only `source.json` unless the user asks for a specific change elsewhere.
-- A package is listed by adding its repository to `githubRepos` in `source.json`. The build reads every `.zip` attached to that repository's GitHub Releases and uses the `package.json` inside it as is.
+- This repository is `vrchat-community/template-package-listing`. `Website/` stays exactly as the template ships it. `.github/workflows/build-listing.yml` differs from the template only by its hourly `schedule` and the `Collect package zips` step.
+- A package is listed by adding its documentation site's `vpm/releases.json` to `releaseLists` in `source.json`. Each package repository's docs workflow publishes its release zips and that JSON array of their URLs on its own GitHub Pages site. The `Collect package zips` step merges the arrays into `packages`, and the build uses the `package.json` inside each zip as is. `githubRepos` stays empty.
 - Package metadata, including `documentationUrl` and `changelogUrl`, belongs in the package's own `package.json`, not here. Both point at the package's documentation site on GitHub Pages (`https://kamyu1537.github.io/<repo>/`).
 - The listing id `me.kamyu.vpm` and the listing URL `https://kamyu1537.github.io/vcc-listing/index.json` are what users add to VCC. Never change either.

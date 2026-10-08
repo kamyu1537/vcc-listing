@@ -10,5 +10,10 @@
         "url":"https://github.com/kamyu1537/vcc-listing",
         "text":"View on GitHub"
     },
-    "githubRepos":["kamyu1537/vcc-listing"]
+    "githubRepos":[],
+    "releaseLists":[
+        "https://kamyu1537.github.io/toon-color-assistant/vpm/releases.json",
+        "https://kamyu1537.github.io/shape-key-transfer/vpm/releases.json",
+        "https://kamyu1537.github.io/hips-grab/vpm/releases.json"
+    ]
 }
