@@ -49,6 +49,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
           
       - name: Collect package zips
+        shell: bash
         run: |
           releases=$(jq -r '.releaseLists[]' source.json | xargs -n1 curl -fsSL | jq -s 'add // []')
           jq --argjson releases "$releases" '.packages = [{id: "releaseLists", releases: $releases}]' source.json > source.json.tmp
