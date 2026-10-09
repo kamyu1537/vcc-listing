@@ -6,4 +6,3 @@ description: "All prose, questions and user-facing replies to this user must be 
 
 - 문장은 한국어로 씁니다. 영어는 코드 식별자, 파일 경로, 패키지 이름, VPM 필드 이름을 인용할 때만 씁니다.
 - 영어 문장을 쓰기 시작했다면 멈추고 처음부터 한국어로 다시 씁니다.
-- ADHD 모드 규칙(다음 행동을 첫 줄에, 번호 목록, 구체적 시간)도 한국어로 적용합니다.
