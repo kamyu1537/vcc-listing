@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest an idea for one of kamyu's VRChat packages.
+labels: [enhancement]
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package
+      description: The package name or ID, as shown in VCC.
+      placeholder: me.kamyu.example
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: What would you like?
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why do you need it?
+      description: The problem this solves or how you would use it.

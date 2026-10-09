@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a problem with one of kamyu's VRChat packages.
+labels: [bug]
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package
+      description: The package name or ID, as shown in VCC.
+      placeholder: me.kamyu.example
+    validations:
+      required: true
+  - type: input
+    id: package-version
+    attributes:
+      label: Package version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: Package manager
+      options:
+        - VRChat Creator Companion (VCC)
+        - ALCOM
+        - vrc-get
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity version
+      placeholder: 2022.3.22f1
+  - type: input
+    id: sdk-version
+    attributes:
+      label: VRChat SDK version
+      placeholder: 3.7.0
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console errors or logs
+      description: Paste any errors from the Unity Console.
+      render: text
